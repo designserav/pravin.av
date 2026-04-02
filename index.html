@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravin Kumar AV — Product Designer</title>
+    <meta name="description" content="Product Designer crafting SaaS, B2B, and B2C experiences across Fintech, Healthcare, E-commerce, and CRM domains.">
+    <meta name="author" content="Pravin Kumar AV">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Luxurious+Script&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Memphis Custom Cursor -->
+    <div class="memphis-cursor" id="cursor"></div>
+    <div class="memphis-follower bg-cyan" id="follower-1"></div>
+    <div class="memphis-follower bg-pink shape-triangle" id="follower-2"></div>
+
+    <canvas id="grain-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">pk</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#showcase" class="nav-link">WORK</a>
+                <a href="#cabinet" class="nav-link">CABINET</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="mailto:avpravinkumar@gmail.com" class="nav-resume-btn">RESUME</a>
+            </div>
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" class="mobile-link">ABOUT</a>
+        <a href="#showcase" class="mobile-link">WORK</a>
+        <a href="#cabinet" class="mobile-link">CABINET</a>
+        <a href="#contact" class="mobile-link">CONTACT</a>
+        <a href="mailto:avpravinkumar@gmail.com" class="mobile-resume-btn">RESUME</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-portrait-area">
+            <div class="portrait-spotlight">
+                <div class="portrait-frame">
+                    <img src="assets/profile.png" alt="Pravin Kumar AV" class="portrait-img">
+                </div>
+            </div>
+            <div class="sticky-note">
+                <span>Currently Product</span>
+                <span>Design @ <strong>Spider India</strong></span>
+            </div>
+
+            <!-- 3D Floating Objects — Real PNG images -->
+            <div class="floating-obj obj-laptop" data-speed="2">
+                <img src="assets/3d-laptop.png" alt="Laptop" draggable="false">
+            </div>
+            <div class="floating-obj obj-chess" data-speed="3">
+                <img src="assets/3d-chess.png" alt="Chess" draggable="false">
+            </div>
+            <div class="floating-obj obj-book" data-speed="1.5">
+                <img src="assets/3d-book.png" alt="Book" draggable="false">
+            </div>
+            <div class="floating-obj obj-cabinet" data-speed="2.5">
+                <img src="assets/3d-cabinet.png" alt="Cabinet" draggable="false">
+            </div>
+        </div>
+
+        <!-- Rolling text + Name -->
+        <div class="hero-text-area">
+            <div class="rolling-text-container">
+                <div class="rolling-text" id="rolling-text">
+                    <span>PRODUCT DESIGNER</span>
+                    <span>UX RESEARCHER</span>
+                    <span>UI DESIGNER</span>
+                    <span>PROTOTYPER</span>
+                    <span>DESIGN SYSTEM BUILDER</span>
+                    <span>PRODUCT DESIGNER</span>
+                </div>
+            </div>
+            <h1 class="hero-name">Pravin Kumar</h1>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="memphis-scroll-indicator">
+                <svg viewBox="0 0 40 40" width="40" height="40">
+                    <path class="zigzag" d="M10,10 L20,20 L30,10" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                    <circle class="dot" cx="20" cy="30" r="4" fill="currentColor"/>
+                </svg>
+            </div>
+            <span class="scroll-text">SCROLL</span>
+        </div>
+    </section>
+
+    <!-- ETHOS / ABOUT -->
+    <section class="ethos" id="about">
+        <div class="ethos-divider">
+            <span class="divider-label">✦ MY ETHOS</span>
+            <span class="divider-center">(pravinkumar ©2026)</span>
+            <span class="divider-coords">(13.0827° N, 80.2707° E)</span>
+        </div>
+        <div class="ethos-content">
+            <h2 class="ethos-headline">
+                Engineered by <em class="script-text">Reason,</em> Designed
+                <br>by <em class="script-text">Instinct.</em>
+            </h2>
+            <p class="ethos-subtext">
+                I design not for beauty, but for <em class="italic-text">Direction.</em>
+            </p>
+        </div>
+
+        <div class="about-block">
+            <div class="about-intro">
+                <p>Product Designer with experience designing SaaS, B2B, and B2C platforms across <strong>Fintech, Healthcare, E-commerce, and CRM</strong> domains. Skilled in user research, wireframing, prototyping, design systems, usability testing, and responsive web design.</p>
+                <p>Experienced in collaborating with cross-functional teams in <strong>Agile environments</strong> to deliver scalable, user-centered digital products.</p>
+            </div>
+            <div class="about-stats-row">
+                <div class="stat-item">
+                    <span class="stat-num" data-count="15">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-desc">SaaS Products</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="2">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-desc">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="25">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-desc">Faster Handoff</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="30">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-desc">Better Completion</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-bar">
+            <div class="exp-item">
+                <span class="exp-role">UI/UX Designer</span>
+                <span class="exp-at">@ Spider India</span>
+                <span class="exp-date">Jun '25 – Feb '26</span>
+            </div>
+            <div class="exp-divider"></div>
+            <div class="exp-item">
+                <span class="exp-role">UI/UX Designer</span>
+                <span class="exp-at">@ Highra Technologies</span>
+                <span class="exp-date">Nov '24 – May '25</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section class="showcase" id="showcase">
+        <div class="showcase-header">
+            <h2 class="showcase-title">/ SHOWCASE</h2>
+            <p class="showcase-sub"><em class="italic-text">Selected works that define my craft.</em></p>
+        </div>
+
+        <div class="showcase-grid">
+            <div class="showcase-card" data-anim="fade-up">
+                <div class="card-image" style="background: linear-gradient(135deg, #2D1B69 0%, #1a0a3e 100%);">
+                    <div class="card-image-content">
+                        <span class="card-emoji">🛒</span>
+                        <span class="card-inner-title">Spider Ekart.</span>
+                    </div>
+                </div>
+                <div class="card-bar">
+                    <span class="card-name">SPIDER EKART</span>
+                    <span class="card-category">SAAS • E-COMMERCE</span>
+                </div>
+            </div>
+
+            <div class="showcase-card" data-anim="fade-up">
+                <div class="card-image" style="background: linear-gradient(135deg, #3B1D8E 0%, #1F0A5C 100%);">
+                    <div class="card-image-content">
+                        <span class="card-emoji">📊</span>
+                        <span class="card-inner-title">Spider Books</span>
+                    </div>
+                </div>
+                <div class="card-bar">
+                    <span class="card-name">SPIDER BOOKS</span>
+                    <span class="card-category">SAAS • INVOICING</span>
+                </div>
+            </div>
+
+            <div class="showcase-card" data-anim="fade-up">
+                <div class="card-image" style="background: linear-gradient(135deg, #4A1D96 0%, #2B0F6B 100%);">
+                    <div class="card-image-content">
+                        <span class="card-emoji">🌐</span>
+                        <span class="card-inner-title">SpiderPages</span>
+                    </div>
+                </div>
+                <div class="card-bar">
+                    <span class="card-name">SPIDERPAGES</span>
+                    <span class="card-category">DIGITAL MARKETING</span>
+                </div>
+            </div>
+
+            <div class="showcase-card" data-anim="fade-up">
+                <div class="card-image" style="background: linear-gradient(135deg, #581C87 0%, #3B0764 100%);">
+                    <div class="card-image-content">
+                        <span class="card-emoji">💰</span>
+                        <span class="card-inner-title">HT Billing</span>
+                    </div>
+                </div>
+                <div class="card-bar">
+                    <span class="card-name">HT BILLING</span>
+                    <span class="card-category">SAAS • FINTECH</span>
+                </div>
+            </div>
+
+            <div class="showcase-card" data-anim="fade-up">
+                <div class="card-image" style="background: linear-gradient(135deg, #6B21A8 0%, #4C1D95 100%);">
+                    <div class="card-image-content">
+                        <span class="card-emoji">✉️</span>
+                        <span class="card-inner-title">EngageMail</span>
+                    </div>
+                </div>
+                <div class="card-bar">
+                    <span class="card-name">ENGAGEMAIL</span>
+                    <span class="card-category">SAAS • AUTOMATION</span>
+                </div>
+            </div>
+
+            <div class="showcase-card showcase-card-cta" data-anim="fade-up">
+                <a href="mailto:avpravinkumar@gmail.com" class="card-cta-inner">
+                    <span class="cta-text">Want to see more?</span>
+                    <span class="cta-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CABINET -->
+    <section class="cabinet" id="cabinet">
+        <div class="cabinet-header">
+            <h2 class="cabinet-title">/ CABINET</h2>
+            <p class="cabinet-sub"><em class="italic-text">Wearing a few too many hats from my bottom drawer (foundation)</em></p>
+        </div>
+
+        <div class="cabinet-since">
+            <span class="since-badge">SINCE</span>
+            <span class="since-date">Jul • '24</span>
+        </div>
+        <p class="cabinet-intro">I have engaged professionally with various clients across these areas of work!</p>
+
+        <div class="cabinet-content">
+            <div class="cabinet-list">
+                <div class="cabinet-item active" data-preview="ux"><h3>UX RESEARCH</h3></div>
+                <div class="cabinet-item" data-preview="ui"><h3>UI DESIGN</h3></div>
+                <div class="cabinet-item" data-preview="mobile"><h3>MOBILE UI DESIGN</h3></div>
+                <div class="cabinet-item" data-preview="web"><h3>WEB DESIGN</h3></div>
+                <div class="cabinet-item" data-preview="brand"><h3>BRAND IDENTITY</h3></div>
+                <div class="cabinet-item" data-preview="dev"><h3>DEVELOPMENT</h3></div>
+                <div class="cabinet-item" data-preview="system"><h3>DESIGN SYSTEMS</h3></div>
+            </div>
+            <div class="cabinet-preview" id="cabinet-preview">
+                <div class="preview-card active" data-preview-id="ux">
+                    <div class="preview-visual" style="background: linear-gradient(135deg, #2D1B69, #0A0014);"><span>User Research • Persona Creation • Usability Testing</span></div>
+                </div>
+                <div class="preview-card" data-preview-id="ui">
+                    <div class="preview-visual" style="background: linear-gradient(135deg, #3B1D8E, #0A0014);"><span>High-Fidelity Prototypes • Interactive Mockups • Visual Design</span></div>
+                </div>
+                <div class="preview-card" data-preview-id="mobile">
+                    <div class="preview-visual" style="background: linear-gradient(135deg, #4A1D96, #0A0014);"><span>iOS & Android • Responsive Layouts • Gesture Interactions</span></div>
+                </div>
+                <div class="preview-card" data-preview-id="web">
+                    <div class="preview-visual" style="background: linear-gradient(135deg, #581C87, #0A0014);"><span>SaaS Platforms • Dashboards • Landing Pages</span></div>
+                </div>
+                <div class="preview-card" data-preview-id="brand">
+                    <div class="preview-visual" style="background: linear-gradient(135deg, #6B21A8, #0A0014);"><span>Logo Design • Brand Guidelines • Marketing Creatives</span></div>
+                </div>
+                <div class="preview-card" data-preview-id="dev">
+                    <div class="preview-visual" style="background: linear-gradient(135deg, #7E22CE, #0A0014);"><span>HTML • CSS • JavaScript • Responsive Web Development</span></div>
+                </div>
+                <div class="preview-card" data-preview-id="system">
+                    <div class="preview-visual" style="background: linear-gradient(135deg, #9333EA, #0A0014);"><span>Component Libraries • Design Tokens • Style Guides</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tools-row">
+            <span class="tools-label">TOOLS I USE</span>
+            <div class="tools-list">
+                <span class="tool-pill">Figma</span>
+                <span class="tool-pill">Adobe XD</span>
+                <span class="tool-pill">Maze</span>
+                <span class="tool-pill">Photoshop</span>
+                <span class="tool-pill">Illustrator</span>
+                <span class="tool-pill">Premiere Pro</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <h2 class="contact-headline">
+                Let's build something<br><em class="script-text">extraordinary.</em>
+            </h2>
+            <div class="contact-links">
+                <a href="mailto:avpravinkumar@gmail.com" class="contact-link">
+                    <span class="link-label">EMAIL</span>
+                    <span class="link-value">avpravinkumar@gmail.com</span>
+                    <span class="link-arrow">↗</span>
+                </a>
+                <a href="tel:+919047327113" class="contact-link">
+                    <span class="link-label">PHONE</span>
+                    <span class="link-value">+91-9047327113</span>
+                    <span class="link-arrow">↗</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="contact-link">
+                    <span class="link-label">LINKEDIN</span>
+                    <span class="link-value">Connect with me</span>
+                    <span class="link-arrow">↗</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">pk</span>
+            <span class="footer-copy">© 2026 Pravin Kumar AV</span>
+            <span class="footer-note">Chennai, India</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
