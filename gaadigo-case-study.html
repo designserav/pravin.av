@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GaadiGo Case Study | Product Designer</title>
+    <meta name="description" content="GaadiGo — A centralized B2B SaaS logistics dashboard for managing shipments, drivers, fleet tracking, and delivery analytics. Case study by Pravin Kumar AV.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .highlight-box {
+            margin-top: 16px;
+            padding: 12px;
+            background: rgba(214,223,34,0.05);
+            border-left: 2px solid var(--accent);
+            color: var(--text-primary);
+        }
+        .case-image {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .scroll-item:hover .case-image {
+            transform: scale(1.03);
+            cursor: zoom-in;
+        }
+        /* Screen placeholder for when no screenshots are available */
+        .screen-placeholder {
+            width: 100%;
+            min-height: 340px;
+            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(214,223,34,0.04) 100%);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--card-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        .screen-placeholder svg {
+            opacity: 0.3;
+        }
+        .step-flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+            align-items: center;
+        }
+        .step-flow .step {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .step-flow .step-arrow {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 16px 8px;
+            border-radius: var(--radius-sm);
+            background: rgba(214,223,34,0.05);
+            border: 1px solid rgba(214,223,34,0.15);
+        }
+        .stat-item .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+        }
+        .stat-item .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        .persona-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            margin-top: 16px;
+            align-items: start;
+        }
+        .persona-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #A3E635);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            flex-shrink: 0;
+        }
+        .empathy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .empathy-item {
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--card-border);
+            background: rgba(255,255,255,0.02);
+        }
+        .empathy-item .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }
+        .empathy-item p {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" style="display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 0.95rem; color: var(--text-secondary); transition: var(--transition-smooth);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Portfolio
+            </a>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero fade-in" style="margin-bottom: 0;">
+            <div class="hero-glow"></div>
+            <div class="hero-content" style="width: 100%;">
+                <h1 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem);">GaadiGo</h1>
+                <h2 class="hero-subtitle" style="font-size: 1.5rem; color: var(--text-secondary);">B2B SaaS Logistics &amp; Fleet Management Platform</h2>
+                <p class="hero-desc" style="max-width: 680px; margin-top: 16px;">
+                    A centralized, cloud-based dashboard that helps logistics companies manage shipments, drivers, vehicles, and real-time delivery tracking — all in one unified workspace.
+                </p>
+                <div class="tag-list" style="margin-top: 16px;">
+                    <li>B2B SaaS</li>
+                    <li>Logistics</li>
+                    <li>Dashboard</li>
+                    <li>Fleet Management</li>
+                    <li>Data Visualization</li>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screen Gallery -->
+        <section class="image-gallery fade-in" style="margin-top: 32px; margin-bottom: var(--space-3); position: relative;">
+            <button class="gallery-nav prev" onclick="document.getElementById('gaadigo-gallery').scrollBy({left: -350, behavior: 'smooth'})" aria-label="Previous image">❮</button>
+            <button class="gallery-nav next" onclick="document.getElementById('gaadigo-gallery').scrollBy({left: 350, behavior: 'smooth'})" aria-label="Next image">❯</button>
+
+            <div class="horizontal-scroll-container" id="gaadigo-gallery">
+                <div class="scroll-item">
+                    <div class="screen-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        Dashboard Overview
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="screen-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 17H5a2 2 0 00-2 2"/><path d="M21 17h-4a2 2 0 01-2-2V9"/><rect x="5" y="3" width="14" height="8" rx="1"/></svg>
+                        Shipment Management
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="screen-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                        Live Fleet Tracking
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="screen-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                        Driver Management
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="screen-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        Analytics &amp; Reports
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid 1: Overview + Problem -->
+        <section class="bento-grid fade-in" style="margin-top: 0; margin-bottom: var(--space-3);">
+
+            <!-- Overview -->
+            <div class="bento-card col-span-2">
+                <h3>Overview</h3>
+                <div style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                    <div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Project Type</p>
+                        <p>B2B SaaS / Logistics Platform</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Role</p>
+                        <p>UI/UX Designer</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Domain</p>
+                        <p>Logistics &amp; Supply Chain</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Tools</p>
+                        <p>Figma, Maze, Adobe XD</p>
+                    </div>
+                </div>
+                <h4 style="margin-top: 24px; margin-bottom: 8px;">My Contribution</h4>
+                <div class="tag-list">
+                    <li>UX Research</li>
+                    <li>Wireframing</li>
+                    <li>UI Design</li>
+                    <li>Design System</li>
+                    <li>Usability Testing</li>
+                    <li>Prototyping</li>
+                </div>
+            </div>
+
+            <!-- Key Stats -->
+            <div class="bento-card">
+                <h3>Key Impact</h3>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Task success on delay detection</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">78%</span>
+                        <span class="stat-label">Users cited lack of real-time visibility</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15 min</span>
+                        <span class="stat-label">Saved per incident with proactive alerts</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Problem -->
+            <div class="bento-card col-span-3">
+                <h3>The Problem</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 16px;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 8px;">For Logistics Managers:</p>
+                        <ul class="bullet-list">
+                            <li>Managing shipments, drivers, and fleet using multiple disconnected tools</li>
+                            <li>Spending up to 40% of the day switching between tracking apps, spreadsheets, and communication tools</li>
+                            <li>High cognitive load and operational confusion</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 8px;">Research Findings:</p>
+                        <ul class="bullet-list">
+                            <li>78% cited "lack of real-time visibility" as their biggest daily frustration</li>
+                            <li>65% struggled with delayed shipments falling through the cracks</li>
+                            <li>Existing platforms (Onfleet, Samsara) were cluttered and overly complex</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-box">👉 "I just want to open my laptop and instantly see what is delayed and which trucks are available — without making five different phone calls." — Operations Manager</div>
+            </div>
+        </section>
+
+        <!-- Bento Grid 2: Research & Define -->
+        <section class="bento-grid fade-in" style="margin-top: 0; margin-bottom: var(--space-3);">
+
+            <!-- Research -->
+            <div class="bento-card col-span-2">
+                <h3>Research Insights</h3>
+                <ul class="bullet-list" style="margin-top: 16px;">
+                    <li><strong>Quantitative:</strong> Surveyed 50+ logistics operators — 78% lacked real-time visibility, 65% had issues with delayed shipments</li>
+                    <li><strong>Qualitative:</strong> 1-on-1 interviews revealed a clear need for a "single source of truth" for operations</li>
+                    <li><strong>Competitor Audit:</strong> Onfleet &amp; Samsara are feature-rich but cluttered — opportunity for a cleaner, modular approach</li>
+                    <li><strong>Key Theme:</strong> Proactive alerts > reactive problem-solving</li>
+                </ul>
+                <div class="highlight-box">👉 Insight: A "Control Center" dashboard that surfaces actionable data immediately would reduce chaos significantly.</div>
+            </div>
+
+            <!-- User Persona -->
+            <div class="bento-card">
+                <h3>User Persona</h3>
+                <div class="persona-grid">
+                    <div class="persona-avatar">M</div>
+                    <div>
+                        <p style="font-weight: 600; color: var(--text-primary);">Operations Manager Mark</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Age 38 · Logistics Industry</p>
+                    </div>
+                </div>
+                <ul class="bullet-list" style="margin-top: 16px;">
+                    <li><strong>Goal:</strong> Maximize fleet utilization &amp; reduce delivery delays</li>
+                    <li><strong>Pain:</strong> Data silos, slow reporting, reactive problem solving</li>
+                    <li><strong>Need:</strong> One screen that shows everything critical</li>
+                </ul>
+            </div>
+
+            <!-- Empathy Map -->
+            <div class="bento-card col-span-3">
+                <h3>Empathy Mapping</h3>
+                <div class="empathy-grid">
+                    <div class="empathy-item">
+                        <p class="label">Says</p>
+                        <p>"Where is driver #4 currently located?"</p>
+                    </div>
+                    <div class="empathy-item">
+                        <p class="label">Thinks</p>
+                        <p>"I hope we don't miss the SLA on this high-priority batch."</p>
+                    </div>
+                    <div class="empathy-item">
+                        <p class="label">Does</p>
+                        <p>Constantly refreshes multiple tabs and manually updates Excel sheets.</p>
+                    </div>
+                    <div class="empathy-item">
+                        <p class="label">Feels</p>
+                        <p>Overwhelmed and anxious during peak delivery hours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid 3: Ideate & Design -->
+        <section class="bento-grid fade-in" style="margin-top: 0; margin-bottom: var(--space-3);">
+
+            <!-- Information Architecture -->
+            <div class="bento-card col-span-2">
+                <h3>Information Architecture</h3>
+                <p style="color: var(--text-muted); margin-bottom: 16px;">Structured the platform into logical hubs to reduce navigation depth:</p>
+                <div class="step-flow">
+                    <div class="step"><span class="btn-outline">Dashboard</span></div>
+                    <span class="step-arrow">→</span>
+                    <div class="step"><span class="btn-outline">Shipments</span></div>
+                    <span class="step-arrow">→</span>
+                    <div class="step"><span class="btn-outline">Fleet</span></div>
+                    <span class="step-arrow">→</span>
+                    <div class="step"><span class="btn-outline">Drivers</span></div>
+                    <span class="step-arrow">→</span>
+                    <div class="step"><span class="btn-outline">Live Tracking</span></div>
+                    <span class="step-arrow">→</span>
+                    <div class="step"><span class="btn-outline">Analytics</span></div>
+                </div>
+                <div class="highlight-box" style="margin-top: 16px;">👉 Affinity Mapping themes: Fleet Visibility · Shipment Tracking · Quick Actions · Analytics</div>
+            </div>
+
+            <!-- Prototype -->
+            <div class="bento-card">
+                <h3>Design System</h3>
+                <ul class="bullet-list" style="margin-top: 16px;">
+                    <li>Dark sidebar for focus &amp; navigation</li>
+                    <li>Clean light-mode content area</li>
+                    <li>Strict color-coding for status: <span style="color: #4ade80; font-weight: 500;">● Delivered</span> · <span style="color: #f59e0b; font-weight: 500;">● Delayed</span> · <span style="color: #60a5fa; font-weight: 500;">● In Transit</span></li>
+                    <li>Glassmorphic elements for visual hierarchy</li>
+                    <li>Consistent KPI card grid at the top of every screen</li>
+                </ul>
+            </div>
+
+            <!-- User Flow -->
+            <div class="bento-card col-span-2">
+                <h3>Critical User Flow</h3>
+                <p style="color: var(--text-muted); margin-bottom: 12px;">Primary path: Creating a Shipment &amp; Assigning a Driver (minimised clicks via Quick Actions):</p>
+                <div class="step-flow">
+                    <div class="step"><span class="btn-outline">1. Land on Dashboard</span></div>
+                    <span class="step-arrow">→</span>
+                    <div class="step"><span class="btn-outline">2. Click Quick Action</span></div>
+                    <span class="step-arrow">→</span>
+                    <div class="step"><span class="btn-outline">3. Fill Shipment Details</span></div>
+                    <span class="step-arrow">→</span>
+                    <div class="step"><span class="btn-outline">4. Assign Driver</span></div>
+                    <span class="step-arrow">→</span>
+                    <div class="step"><span class="btn-outline">5. Confirm &amp; Track</span></div>
+                </div>
+            </div>
+
+            <!-- Wireframes -->
+            <div class="bento-card">
+                <h3>Wireframes</h3>
+                <ul class="bullet-list" style="margin-top: 16px;">
+                    <li><strong>Lo-Fi:</strong> Content hierarchy focused — KPI grid is the primary eye-track target</li>
+                    <li><strong>Mid-Fi:</strong> Precise spacing, grid systems, and data-table structures</li>
+                    <li><strong>Hi-Fi:</strong> Full design system with motion &amp; status color-coding</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bento Grid 4: Testing & Outcomes -->
+        <section class="bento-grid fade-in" style="margin-top: 0; margin-bottom: 64px;">
+
+            <!-- Usability Testing -->
+            <div class="bento-card col-span-2">
+                <h3>Usability Testing</h3>
+                <p style="color: var(--text-muted); margin-top: 8px; margin-bottom: 16px;">Task-based testing sessions with 5 target users on the interactive prototype:</p>
+                <ul class="bullet-list">
+                    <li><strong>Task 1 — Identify delayed shipments:</strong> 100% success rate in under 3 seconds — proving the effectiveness of the top-row KPI cards</li>
+                    <li><strong>Task 2 — Locate a specific vehicle:</strong> Users found navigating to "Fleet" and scrolling took too long</li>
+                    <li><strong>Iteration:</strong> Added a prominent Global Search Bar in the top navigation — users can now search for shipments, drivers, or vehicles from any page instantly</li>
+                </ul>
+                <div class="highlight-box">👉 Proactive KPI alerts moved users from reactive (finding out late) to proactive state — saving 15 min per incident.</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+                <!-- Learnings -->
+                <div class="bento-card">
+                    <h3>Learnings</h3>
+                    <ul class="bullet-list" style="margin-top: 16px;">
+                        <li>Data-heavy dashboards need strong visual hierarchy, not more data</li>
+                        <li>Quick Actions on the global level save more time than sub-menus</li>
+                        <li>Color-coded statuses reduce cognitive load dramatically</li>
+                    </ul>
+                </div>
+
+                <!-- Next Steps -->
+                <div class="bento-card">
+                    <h3>Next Steps</h3>
+                    <ul class="bullet-list" style="margin-top: 16px;">
+                        <li>Add AI-powered route optimization suggestions</li>
+                        <li>Build a driver mobile companion app</li>
+                        <li>Introduce predictive delay alerts via ML</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Impact -->
+            <div class="bento-card col-span-3" style="border-color: var(--accent);">
+                <h3>Solution &amp; Impact</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 16px;">
+                    <div style="flex: 1; min-width: 220px;">
+                        <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 8px;">What We Built:</p>
+                        <ul class="bullet-list">
+                            <li>Unified control center replacing 4+ disconnected tools</li>
+                            <li>Real-time KPI grid (Total · Active · Delayed · Available)</li>
+                            <li>Global Search across all entities</li>
+                            <li>Live fleet map with driver status overlays</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; min-width: 220px;">
+                        <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 8px;">Measured Outcomes:</p>
+                        <ul class="bullet-list">
+                            <li>100% task success for delay identification (&lt;3 sec)</li>
+                            <li>~15 minutes saved per incident with proactive alerts</li>
+                            <li>Significant reduction in navigation time via Global Search</li>
+                            <li>Positive feedback on clean, focused UI vs. competitors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>PRAVIN KUMAR AV</h3>
+                <p>Product Designer</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/pravin-kumar-av-6725b0189/" target="_blank">LinkedIn</a>
+                <a href="https://www.behance.net/pravinkumarav1" target="_blank">Behance</a>
+                <a href="mailto:avpravinkumar@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
